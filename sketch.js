@@ -52,9 +52,9 @@ function draw(){
 function touchStarted(){
   background(255);
   text(touches.length, 200,200);
-  text(touches[0].x,200,200);
-  text(touches[0].y,200,220);
-  text(touches[1].x,200,240);
+  text(touches[0].x,200,220);
+  text(touches[0].y,200,240);
+  text(touches[1].x,200,260);
   text(touches[1].y,200,280);
   text(touches[2].x,200,300);
   text(touches[2].y,200,320);
