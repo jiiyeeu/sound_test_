@@ -2,13 +2,13 @@ let r,g,b;
 
 function setup() {
   createCanvas(640, 480);
-  r = random(50,255);
+  //r = random(50,255);
   g = random(0,200);
   b = random(50,255);
 }
 
 function draw() {
-  background(r,g,b);
+  background(20,g,b);
   console('draw');
   } 
   
