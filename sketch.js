@@ -67,6 +67,7 @@ function touchStarted(){
 }
 */
 //센서 작동 공식
+/*
 let button;
 let permission = false;
 let osc;
@@ -102,5 +103,26 @@ function draw(){
   background(255);
   textSize(72);
   text(rotationX, 100, 100);
+}
+*/
+
+//아이폰 사운드 공식
+let osc;
+
+function setup(){
+  osc = new p5.Oscillator("sine");
+
+  osc.amp(0.5);
+
+  osc.freq(440);
+}
+
+function draw(){
+
+}
+
+function touchStarted(){
+  getAudioContext().resume();
+  osc.start();
 }
 
