@@ -151,20 +151,20 @@ function setup(){
 
 function draw(){
   //wave.amp(ampValue, 0.1);
-  wave.freq(ampValue);
+  //wave.freq(ampValue);
 }
 
 function toggle(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    //wave.amp(ampValue, 1);
-    wave.amp(0.3, 1);
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
     playing = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    ampValue = 0;
+    //ampValue = 0;
     playing=false;
   }
 }
