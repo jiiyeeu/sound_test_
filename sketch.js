@@ -40,7 +40,7 @@ function draw() {
   */
 
 // 멀티터치
-
+/*
 function setup(){
   createCanvas(displayWidth, displayHeight)
 }
@@ -65,3 +65,42 @@ function touchStarted(){
   text(touches[5].x,200,420);
   text(touches[5].y,200,440);
 }
+*/
+//센서 작동 공식
+let button;
+let permission = false;
+let osc;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+  if(typeof DeviceMotionEvent.requestPermission === "function"){
+    background(255,0,0);
+    button = createButton("Click to iOS Sensor");
+    button.mousePressed(iosAccese);
+  }else{
+    background(0,255,0);
+    text("is not a ios", 100,100);
+  }
+
+  osc = new p5.Oscillator("sine");
+}
+
+function iosAccese(){
+  DeviceMotionEvent.requestPermission().then((response) => {
+    if(response === "granted"){
+      permission = true;
+    }
+  }).catch(console.error);
+} 
+
+function draw(){
+  osc.amp(0.5);
+  osc.freq(440);
+  osc.start();
+  if(!permission) return;
+  background(255);
+  textSize(72);
+  text(rotationX, 100, 100);
+}
+
