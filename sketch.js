@@ -136,7 +136,8 @@ var playing = false;
 var ampValue = 0;
 
 function setup(){
-  createCanvas(displayWidth, displayHeight);
+  //createCanvas(displayWidth, displayHeight);
+  createCanvas(720,256);
 
   wave = new p5.Oscillator();
   wave.setType("sine");
@@ -144,7 +145,8 @@ function setup(){
   wave.amp(0);
 
   button = createButton('play/pause');
-  button.mousePressed(toggle);
+  //button.mousePressed(toggle);
+  button.touchStarted(toggle);
 }
 
 function draw(){
