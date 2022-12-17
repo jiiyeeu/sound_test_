@@ -136,7 +136,7 @@ var playing = false;
 var ampValue = 0;
 
 function setup(){
-  createCanvas(720, 256);
+  createCanvas(displayWidth, displayHeight);
 
   wave = new p5.Oscillator();
   wave.setType("sine");
