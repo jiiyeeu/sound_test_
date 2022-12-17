@@ -110,6 +110,7 @@ function draw(){
 let osc;
 
 function setup(){
+  background(0,0,0);
   osc = new p5.Oscillator("sine");
 
   osc.amp(0.5);
