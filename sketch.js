@@ -107,6 +107,7 @@ function draw(){
 */
 
 //아이폰 사운드 공식
+/*
 let osc;
 
 function setup(){
@@ -126,8 +127,49 @@ function touchStarted(){
   getAudioContext().resume();
   osc.start();
 }
+*/
 
-function touchEnded(){
-  osc.end();
+// 버튼 누르면 폰 각도에 따라서 색 변하는 거
+var wave;
+var button;
+var playing = false;
+var ampValue = 0;
+
+function setup(){
+  createCanvas(720, 256);
+
+  wave = new p5.Oscillator();
+  wave.setType("sine");
+  //wave.freq(440);
+  wave.amp(0);
+
+  button = createButton('play/pause');
+  button.mousePressed(toggle);
 }
 
+function draw(){
+  //wave.amp(ampValue, 0.1);
+  wave.freq(ampValue);
+}
+
+function toggle(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    //wave.amp(ampValue, 1);
+    wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function deviceMoved(){
+  //ampValue = accelerationX/2;;
+  ampValue = accelerationX*1000;
+  background(255);
+  text(accelerationX/2, 10, 10);
+}
