@@ -126,3 +126,7 @@ function touchStarted(){
   osc.start();
 }
 
+function touchEnded(){
+  osc.end();
+}
+
