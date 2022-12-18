@@ -133,7 +133,7 @@ function touchStarted(){
 var wave;
 var button;
 var playing = false;
-var ampValue = 0;
+//var ampValue = 0;
 
 function setup(){
   //createCanvas(displayWidth, displayHeight);
@@ -158,8 +158,8 @@ function toggle(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    //wave.amp(ampValue, 1);
+    wave.amp(0.3, 1);
     playing = true;
   }else{
     getAudioContext().resume();
@@ -172,6 +172,6 @@ function toggle(){
 function deviceMoved(){
   //ampValue = accelerationX/2;;
   ampValue = accelerationX*1000;
-  background(255);
+  background(255, 0, 0);
   text(accelerationX/2, 10, 10);
 }
