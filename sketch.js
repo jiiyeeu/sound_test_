@@ -133,7 +133,7 @@ function touchStarted(){
 var wave;
 var button;
 var playing = false;
-//var ampValue = 0;
+var ampValue = 0;
 
 function setup(){
   //createCanvas(displayWidth, displayHeight);
@@ -150,21 +150,21 @@ function setup(){
 }
 
 function draw(){
-  //wave.amp(ampValue, 0.1);
-  //wave.freq(ampValue);
+  wave.amp(ampValue, 0.1);
+  wave.freq(ampValue);
 }
 
 function toggle(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    //wave.amp(ampValue, 1);
-    wave.amp(0.3, 1);
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
-    //ampValue = 0;
+    //wave.amp(0,1);
+    ampValue = 0;
     playing=false;
   }
 }
