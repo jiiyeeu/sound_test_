@@ -134,10 +134,20 @@ var wave;
 var button;
 var playing = false;
 var ampValue = 0;
+let permission = false;
 
 function setup(){
   //createCanvas(displayWidth, displayHeight);
   createCanvas(720,256);
+
+  if(typeof DeviceMotionEvent.requestPermission === "function"){
+    background(255,0,0);
+    button = createButton("Click to iOS Sensor");
+    button.mousePressed(iosAccese);
+  }else{
+    background(0,255,0);
+    text("is not a ios", 100,100);
+  }
 
   wave = new p5.Oscillator();
   wave.setType("sine");
@@ -149,9 +159,23 @@ function setup(){
   button.touchStarted(toggle);
 }
 
+function iosAccese(){
+  DeviceMotionEvent.requestPermission().then((response) => {
+    if(response === "granted"){
+      permission = true;
+    }
+  }).catch(console.error);
+} 
+
 function draw(){
+  if(!permission) return;
+  background(255,255,255);
+  textSize(72);
+  text(accelerationX, 100, 100);
+
   wave.amp(ampValue, 0.1);
   wave.freq(ampValue);
+  
 }
 
 function toggle(){
@@ -168,6 +192,7 @@ function toggle(){
     playing=false;
   }
 }
+
 
 function deviceMoved(){
   //ampValue = accelerationX/2;;
