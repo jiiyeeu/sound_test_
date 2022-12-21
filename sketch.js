@@ -225,7 +225,7 @@ function setup(){
   //wave.freq(440);
   wave.amp(0);
 
-  button_C = createButton('도');
+  button_C = createButton('도다');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -277,7 +277,8 @@ function toggle_C(){
   if(!playing_C){
     getAudioContext().resume();
     wave.start();
-    wave.amp(261, 1);
+    wave.amp(0.3, 1);
+    wave.freq(261);
     playing_C = true;
   }else{
     getAudioContext().resume();
@@ -290,7 +291,8 @@ function toggle_D(){
   if(!playing_D){
     getAudioContext().resume();
     wave.start();
-    wave.amp(293, 1);
+    wave.amp(0.3, 1);
+    wave.freq(293);
     playing_D = true;
   }else{
     getAudioContext().resume();
@@ -303,7 +305,8 @@ function toggle_E(){
   if(!playing_E){
     getAudioContext().resume();
     wave.start();
-    wave.amp(329, 1);
+    wave.amp(0.3, 1);
+    wave.freq(329);
     playing_E = true;
   }else{
     getAudioContext().resume();
@@ -316,7 +319,8 @@ function toggle_F(){
   if(!playing_F){
     getAudioContext().resume();
     wave.start();
-    wave.amp(349, 1);
+    wave.amp(0.3, 1);
+    wave.freq(349);
     playing_F = true;
   }else{
     getAudioContext().resume();
@@ -329,7 +333,8 @@ function toggle_G(){
   if(!playing_G){
     getAudioContext().resume();
     wave.start();
-    wave.amp(391, 1);
+    wave.amp(0.3, 1);
+    wave.freq(391);
     playing_G = true;
   }else{
     getAudioContext().resume();
@@ -342,7 +347,8 @@ function toggle_A(){
   if(!playing_A){
     getAudioContext().resume();
     wave.start();
-    wave.amp(440, 1);
+    wave.amp(0.3, 1);
+    wave.freq(440);
     playing_A = true;
   }else{
     getAudioContext().resume();
@@ -355,7 +361,8 @@ function toggle_B(){
   if(!playing_B){
     getAudioContext().resume();
     wave.start();
-    wave.amp(493, 1);
+    wave.amp(0.3, 1);
+    wave.freq(493);
     playing_B = true;
   }else{
     getAudioContext().resume();
@@ -368,7 +375,8 @@ function toggle_C2(){
   if(!playing_C2){
     getAudioContext().resume();
     wave.start();
-    wave.amp(523, 1);
+    wave.amp(0.3, 1);
+    wave.freq(523);
     playing_C2 = true;
   }else{
     getAudioContext().resume();
