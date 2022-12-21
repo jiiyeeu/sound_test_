@@ -447,7 +447,7 @@ function setup(){
   button_Ds.touchStarted(toggle_Ds);
   button_Ds.touchEnded(toggle_Ds);
   button_Ds.size(70,200);
-  button_Ds.position(290,200);
+  button_Ds.position(290,180);
   button_Ds.style('color', '#000000');
   button_Ds.style('background-color', '#000000');
 
@@ -455,7 +455,7 @@ function setup(){
   button_Fs.touchStarted(toggle_Fs);
   button_Fs.touchEnded(toggle_Fs);
   button_Fs.size(70,200);
-  button_Fs.position(490,200);
+  button_Fs.position(490,180);
   button_Fs.style('color', '#000000');
   button_Fs.style('background-color', '#000000');
 
@@ -463,7 +463,7 @@ function setup(){
   button_Gs.touchStarted(toggle_Gs);
   button_Gs.touchEnded(toggle_Gs);
   button_Gs.size(70,200);
-  button_Gs.position(590,200);
+  button_Gs.position(590,180);
   button_Gs.style('color', '#000000');
   button_Gs.style('background-color', '#000000');
 
@@ -471,20 +471,20 @@ function setup(){
   button_As.touchStarted(toggle_As);
   button_As.touchEnded(toggle_As);
   button_As.size(70,200);
-  button_As.position(690,200);
+  button_As.position(690,180);
   button_As.style('color', '#000000');
   button_As.style('background-color', '#000000');
 
   Plus_button = createButton('+');
   Plus_button.size(90,60);
   Plus_button.position(705,80);
-  Plus_button.style('font-size', '70px');
+  Plus_button.style('font-size', '30px');
   Plus_button.mousePressed(Plus_amp);
 
   Minus_button = createButton('-');
   Minus_button.size(90,60);
   Minus_button.position(835,80);
-  Minus_button.style('font-size', '70px');
+  Minus_button.style('font-size', '30px');
   Minus_button.mousePressed(Minus_amp);
 
 }
