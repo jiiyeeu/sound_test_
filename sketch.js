@@ -318,7 +318,7 @@ function setup(){
   button_C2.touchStarted(toggle_C2);
   button_C2.touchEnded(toggle_C2);
 
-  Plus_button = createButton('+');
+  Plus_button = createButton('+수정');
   Plus_button.mousePressed(Plus_amp);
   Minus_button = createButton('-');
   Minus_button.mousePressed(Minus_amp);
@@ -326,11 +326,16 @@ function setup(){
 }
 
 function Plus_amp(){
-  ampValue += 0.2;
+    ampValue += 0.2;
 }
 
 function Minus_amp(){
-ampValue -= 0.2;
+  if(ampValue>0){
+    ampValue -= 0.2;
+  }
+  else if(ampValue<=0){
+    ampValue = 0;
+  }
 }
 
 function toggle_C(){
