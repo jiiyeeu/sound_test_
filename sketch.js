@@ -206,20 +206,30 @@ function deviceMoved(){
 ///////////////////// 기말 과제 > 키보드 만들기 /////////////////////
 
 var wave_C;
+var wave_Cs;
 var wave_D;
+var wave_Ds;
 var wave_E;
 var wave_F;
+var wave_Fs;
 var wave_G;
+var wave_Gs;
 var wave_A;
+var wave_As;
 var wave_B;
 var wave_C2;
 
 var button_C;
+var button_Cs;
 var button_D;
+var button_Ds;
 var button_E;
 var button_F;
+var button_Fs;
 var button_G;
+var button_Gs;
 var button_A;
+var button_As;
 var button_B;
 var button_C2;
 
@@ -236,6 +246,9 @@ var playing_A = false;
 var playing_As = false;
 var playing_B = false;
 var playing_C2 = false;
+
+var Plus_button;
+var Minus_button;
 
 var ampValue = 0.4;
 
@@ -292,7 +305,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도');
+  button_C = createButton('도c');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
