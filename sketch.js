@@ -333,6 +333,7 @@ function setup(){
   button_C.size(150,600);
   button_C.position(400,300);
   button_C.style('color', '#FFFFFF');
+  button_C.style('border-color', '#000000');
   button_C.style('background-color', '#FFFFFF');
 
 
@@ -349,6 +350,7 @@ function setup(){
   button_D.size(150,600);
   button_D.position(550,300);
   button_D.style('color', '#FFFFFF');
+  button_D.style('border-color', '#000000');
   button_D.style('background-color', '#FFFFFF');
 
   // button_Ds = createButton('레#');
@@ -364,6 +366,7 @@ function setup(){
   button_E.size(150,600);
   button_E.position(700,300);
   button_E.style('color', '#FFFFFF');
+  button_E.style('border-color', '#000000');
   button_E.style('background-color', '#FFFFFF');
 
   button_F = createButton('파');
@@ -372,6 +375,7 @@ function setup(){
   button_F.size(150,600);
   button_F.position(850,300);
   button_F.style('color', '#FFFFFF');
+  button_F.style('border-color', '#000000');
   button_F.style('background-color', '#FFFFFF');
 
   // button_Fs = createButton('파#');
@@ -387,6 +391,7 @@ function setup(){
   button_G.size(150,600);
   button_G.position(1000,300);
   button_G.style('color', '#FFFFFF');
+  button_G.style('border-color', '#000000');
   button_G.style('background-color', '#FFFFFF');
 
   // button_Gs = createButton('솔#');
@@ -402,6 +407,7 @@ function setup(){
   button_A.size(150,600);
   button_A.position(1150,300);
   button_A.style('color', '#FFFFFF');
+  button_A.style('border-color', '#000000');
   button_A.style('background-color', '#FFFFFF');
 
   // button_As = createButton('라#');
@@ -417,6 +423,7 @@ function setup(){
   button_B.size(150,600);
   button_B.position(1300,300);
   button_B.style('color', '#FFFFFF');
+  button_B.style('border-color', '#000000');
   button_B.style('background-color', '#FFFFFF');
 
   button_C2 = createButton('도');
@@ -425,6 +432,7 @@ function setup(){
   button_C2.size(150,600);
   button_C2.position(1450,300);
   button_C2.style('color', '#FFFFFF');
+  button_C2.style('border-color', '#000000');
   button_C2.style('background-color', '#FFFFFF');
 
   button_Cs = createButton('도#');
