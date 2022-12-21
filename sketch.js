@@ -269,7 +269,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도C');
+  button_C = createButton('도');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
