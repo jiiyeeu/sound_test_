@@ -326,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도또');
+  button_C = createButton('도W');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -416,6 +416,20 @@ function draw(){
     wave_As.freq(freqValue);
     wave_B.freq(freqValue);
     wave_C2.freq(freqValue);
+  }else{
+    wave_C.freq(261);
+    wave_Cs.freq(277);
+    wave_D.freq(293);
+    wave_Ds.freq(311);
+    wave_E.freq(329);
+    wave_F.freq(349);
+    wave_Fs.freq(369);
+    wave_G.freq(391);
+    wave_Gs.freq(415);
+    wave_A.freq(440);
+    wave_As.freq(466);
+    wave_B.freq(493);
+    wave_C2.freq(523);
   }
 }
 
@@ -438,7 +452,7 @@ function toggle_C(){
     wave_C.start();
     //wave_C.amp(1);
     wave_C.amp(ampValue);
-    wave_C.freq(261);
+    //wave_C.freq(261);
     // if(rotationX !==0){
     //   wave_C.freq(freqValue);
     // }
@@ -456,7 +470,7 @@ function toggle_Cs(){
     wave_Cs.start();
     //wave_Cs.amp(1);
     wave_Cs.amp(ampValue);
-    wave_Cs.freq(277);
+    //wave_Cs.freq(277);
     playing_Cs = true;
   }else{
     getAudioContext().resume();
@@ -471,7 +485,7 @@ function toggle_D(){
     wave_D.start();
     //wave_D.amp(1);
     wave_D.amp(ampValue);
-    wave_D.freq(293);
+    // wave_D.freq(293);
     playing_D = true;
   }else{
     getAudioContext().resume();
@@ -486,7 +500,7 @@ function toggle_Ds(){
     wave_Ds.start();
     //wave_Ds.amp(1);
     wave_Ds.amp(ampValue);
-    wave_Ds.freq(311);
+    // wave_Ds.freq(311);
     playing_Ds = true;
   }else{
     getAudioContext().resume();
@@ -501,7 +515,7 @@ function toggle_E(){
     wave_E.start();
     //wave_E.amp(1);
     wave_E.amp(ampValue);
-    wave_E.freq(329);
+    // wave_E.freq(329);
     playing_E = true;
   }else{
     getAudioContext().resume();
@@ -516,7 +530,7 @@ function toggle_F(){
     wave_F.start();
     //wave_F.amp(1);
     wave_F.amp(ampValue);
-    wave_F.freq(349);
+    // wave_F.freq(349);
     playing_F = true;
   }else{
     getAudioContext().resume();
@@ -531,7 +545,7 @@ function toggle_Fs(){
     wave_Fs.start();
     //wave_Fs.amp(1);
     wave_Fs.amp(ampValue);
-    wave_Fs.freq(369);
+    // wave_Fs.freq(369);
     playing_Fs = true;
   }else{
     getAudioContext().resume();
@@ -546,7 +560,7 @@ function toggle_G(){
     wave_G.start();
     //wave_G.amp(1);
     wave_G.amp(ampValue);
-    wave_G.freq(391);
+    // wave_G.freq(391);
     playing_G = true;
   }else{
     getAudioContext().resume();
@@ -561,7 +575,7 @@ function toggle_Gs(){
     wave_Gs.start();
     //wave_Gs.amp(1);
     wave_Gs.amp(ampValue);
-    wave_Gs.freq(415);
+    // wave_Gs.freq(415);
     playing_Gs = true;
   }else{
     getAudioContext().resume();
@@ -576,7 +590,7 @@ function toggle_A(){
     wave_A.start();
     //wave_A.amp(1);
     wave_A.amp(ampValue);
-    wave_A.freq(440);
+    // wave_A.freq(440);
     playing_A = true;
   }else{
     getAudioContext().resume();
@@ -591,7 +605,7 @@ function toggle_As(){
     wave_As.start();
     //wave_As.amp(1);
     wave_As.amp(ampValue);
-    wave_As.freq(466);
+    // wave_As.freq(466);
     playing_As = true;
   }else{
     getAudioContext().resume();
@@ -606,7 +620,7 @@ function toggle_B(){
     wave_B.start();
     //wave_B.amp(1);
     wave_B.amp(ampValue);
-    wave_B.freq(493);
+    // wave_B.freq(493);
     playing_B = true;
   }else{
     getAudioContext().resume();
@@ -621,7 +635,7 @@ function toggle_C2(){
     wave_C2.start();
     //wave_C2.amp(1);
     wave_C2.amp(ampValue);
-    wave_C2.freq(523);
+    // wave_C2.freq(523);
     playing_C2 = true;
   }else{
     getAudioContext().resume();
