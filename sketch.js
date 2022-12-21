@@ -344,8 +344,8 @@ function setup(){
   button_G.touchEnded(toggle_G);
 
   button_Gs = createButton('솔#');
-  button_GS.touchStarted(toggle_Gs);
-  button_GS.touchEnded(toggle_Gs);
+  button_Gs.touchStarted(toggle_Gs);
+  button_Gs.touchEnded(toggle_Gs);
 
   button_A = createButton('라');
   button_A.touchStarted(toggle_A);
