@@ -326,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도다');
+  button_C = createButton('도또');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -402,7 +402,7 @@ function deviceMoved(){
 
 function draw(){
 
-  if(rotationX>10 | rotationX<10){
+  if(rotationX>10 || rotationX<10){
     wave_C.freq(freqValue);
     wave_Cs.freq(freqValue);
     wave_D.freq(freqValue);
@@ -417,7 +417,6 @@ function draw(){
     wave_B.freq(freqValue);
     wave_C2.freq(freqValue);
   }
-
 }
 
 function Plus_amp(){
