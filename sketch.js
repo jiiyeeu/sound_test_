@@ -261,7 +261,7 @@ function setup(){
   //createCanvas(720,256);
 
   if(typeof DeviceMotionEvent.requestPermission === "function"){
-    background(255,0,0);
+    background(255,255,0);
     button = createButton("Click to iOS Sensor");
     button.mousePressed(iosAccese);
   }else{
@@ -415,7 +415,7 @@ function toggle_C(){
     if(permission = true & rotationX == 0){
       wave_C.freq(261);
     }else if(permission = true & rotationX !== 0){
-      wave_C.freq(rotationX/5);
+      wave_C.freq(accelerationX*1000);
     }
 
     playing_C = true;
@@ -437,7 +437,7 @@ function toggle_Cs(){
     if(permission = true & rotationX == 0){
       wave_Cs.freq(277);
     }else if(permission = true & rotationX !== 0){
-      wave_Cs.freq(rotationX/5);
+      wave_Cs.freq(accelerationX*1000);
     }
 
     playing_Cs = true;
@@ -459,7 +459,7 @@ function toggle_D(){
     if(permission = true & rotationX == 0){
       wave_D.freq(293);
     }else if(permission = true & rotationX !== 0){
-      wave_D.freq(rotationX/5);
+      wave_D.freq(accelerationX*1000);
     }
 
     playing_D = true;
@@ -481,7 +481,7 @@ function toggle_Ds(){
     if(permission = true & rotationX == 0){
       wave_Ds.freq(311);
     }else if(permission = true & rotationX !== 0){
-      wave_Ds.freq(rotationX/5);
+      wave_Ds.freq(accelerationX*1000);
     }
 
     playing_Ds = true;
@@ -503,7 +503,7 @@ function toggle_E(){
     if(permission = true & rotationX == 0){
       wave_E.freq(329);
     }else if(permission = true & rotationX !== 0){
-      wave_E.freq(rotationX/5);
+      wave_E.freq(accelerationX*1000);
     }
 
     playing_E = true;
@@ -525,7 +525,7 @@ function toggle_F(){
     if(permission = true & rotationX == 0){
       wave_F.freq(349);
     }else if(permission = true & rotationX !== 0){
-      wave_F.freq(rotationX/5);
+      wave_F.freq(accelerationX*1000);
     }
 
     playing_F = true;
@@ -547,7 +547,7 @@ function toggle_Fs(){
     if(permission = true & rotationX == 0){
       wave_Fs.freq(369);
     }else if(permission = true & rotationX !== 0){
-      wave_Fs.freq(rotationX/5);
+      wave_Fs.freq(accelerationX*1000);
     }
 
     playing_Fs = true;
@@ -569,7 +569,7 @@ function toggle_G(){
     if(permission = true & rotationX == 0){
       wave_G.freq(391);
     }else if(permission = true & rotationX !== 0){
-      wave_G.freq(rotationX/5);
+      wave_G.freq(accelerationX*1000);
     }
 
     playing_G = true;
@@ -591,7 +591,7 @@ function toggle_Gs(){
     if(permission = true & rotationX == 0){
       wave_Gs.freq(415);
     }else if(permission = true & rotationX !== 0){
-      wave_Gs.freq(rotationX/5);
+      wave_Gs.freq(accelerationX*1000);
     }
 
     playing_Gs = true;
@@ -613,7 +613,7 @@ function toggle_A(){
     if(permission = true & rotationX == 0){
       wave_A.freq(440);
     }else if(permission = true & rotationX !== 0){
-      wave_A.freq(rotationX/5);
+      wave_A.freq(accelerationX*1000);
     }
 
     playing_A = true;
@@ -635,7 +635,7 @@ function toggle_As(){
     if(permission = true & rotationX == 0){
       wave_As.freq(466);
     }else if(permission = true & rotationX !== 0){
-      wave_As.freq(rotationX/5);
+      wave_As.freq(accelerationX*1000);
     }
 
     playing_As = true;
@@ -657,7 +657,7 @@ function toggle_B(){
     if(permission = true & rotationX == 0){
       wave_B.freq(493);
     }else if(permission = true & rotationX !== 0){
-      wave_B.freq(rotationX/5);
+      wave_B.freq(accelerationX*1000);
     }
 
     playing_B = true;
@@ -679,7 +679,7 @@ function toggle_C2(){
     if(permission = true & rotationX == 0){
       wave_C2.freq(523);
     }else if(permission = true & rotationX !== 0){
-      wave_C2.freq(rotationX/5);
+      wave_C2.freq(accelerationX*1000);
     }
 
     playing_C2 = true;
