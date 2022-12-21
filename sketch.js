@@ -260,14 +260,14 @@ function setup(){
   //createCanvas(displayWidth, displayHeight);
   //createCanvas(windowWidth, windowHeight);
 
-  createCanvas(2000,1000);
+  createCanvas(1050,600);
 
   if(typeof DeviceMotionEvent.requestPermission === "function"){
     //background(255,0,0);
     button = createButton("Click to iOS Sensor");
-    button.size(800,150);
-    button.position(400,100);
-    button.style('font-size', '30px');
+    button.size(535,60);
+    button.position(125,80);
+    button.style('font-size', '15px');
     button.mousePressed(iosAccese);
   }else{
     background(0,255,0);
@@ -330,8 +330,8 @@ function setup(){
   button_C = createButton('도');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
-  button_C.size(150,600);
-  button_C.position(400,300);
+  button_C.size(100,400);
+  button_C.position(125,180);
   button_C.style('color', '#FFFFFF');
   button_C.style('border-color', '#000000');
   button_C.style('background-color', '#FFFFFF');
@@ -347,8 +347,8 @@ function setup(){
   button_D = createButton('레');
   button_D.touchStarted(toggle_D);
   button_D.touchEnded(toggle_D);
-  button_D.size(150,600);
-  button_D.position(550,300);
+  button_D.size(100,400);
+  button_D.position(225,180);
   button_D.style('color', '#FFFFFF');
   button_D.style('border-color', '#000000');
   button_D.style('background-color', '#FFFFFF');
@@ -363,8 +363,8 @@ function setup(){
   button_E = createButton('미');
   button_E.touchStarted(toggle_E);
   button_E.touchEnded(toggle_E);
-  button_E.size(150,600);
-  button_E.position(700,300);
+  button_E.size(100,400);
+  button_E.position(325,180);
   button_E.style('color', '#FFFFFF');
   button_E.style('border-color', '#000000');
   button_E.style('background-color', '#FFFFFF');
@@ -372,8 +372,8 @@ function setup(){
   button_F = createButton('파');
   button_F.touchStarted(toggle_F);
   button_F.touchEnded(toggle_F);
-  button_F.size(150,600);
-  button_F.position(850,300);
+  button_F.size(100,400);
+  button_F.position(425,180);
   button_F.style('color', '#FFFFFF');
   button_F.style('border-color', '#000000');
   button_F.style('background-color', '#FFFFFF');
@@ -388,8 +388,8 @@ function setup(){
   button_G = createButton('솔');
   button_G.touchStarted(toggle_G);
   button_G.touchEnded(toggle_G);
-  button_G.size(150,600);
-  button_G.position(1000,300);
+  button_G.size(100,400);
+  button_G.position(525,180);
   button_G.style('color', '#FFFFFF');
   button_G.style('border-color', '#000000');
   button_G.style('background-color', '#FFFFFF');
@@ -404,8 +404,8 @@ function setup(){
   button_A = createButton('라');
   button_A.touchStarted(toggle_A);
   button_A.touchEnded(toggle_A);
-  button_A.size(150,600);
-  button_A.position(1150,300);
+  button_A.size(100,400);
+  button_A.position(625,180);
   button_A.style('color', '#FFFFFF');
   button_A.style('border-color', '#000000');
   button_A.style('background-color', '#FFFFFF');
@@ -420,8 +420,8 @@ function setup(){
   button_B = createButton('시');
   button_B.touchStarted(toggle_B);
   button_B.touchEnded(toggle_B);
-  button_B.size(150,600);
-  button_B.position(1300,300);
+  button_B.size(100,400);
+  button_B.position(725,180);
   button_B.style('color', '#FFFFFF');
   button_B.style('border-color', '#000000');
   button_B.style('background-color', '#FFFFFF');
@@ -429,8 +429,8 @@ function setup(){
   button_C2 = createButton('도');
   button_C2.touchStarted(toggle_C2);
   button_C2.touchEnded(toggle_C2);
-  button_C2.size(150,600);
-  button_C2.position(1450,300);
+  button_C2.size(100,400);
+  button_C2.position(825,180);
   button_C2.style('color', '#FFFFFF');
   button_C2.style('border-color', '#000000');
   button_C2.style('background-color', '#FFFFFF');
@@ -438,52 +438,52 @@ function setup(){
   button_Cs = createButton('도#');
   button_Cs.touchStarted(toggle_Cs);
   button_Cs.touchEnded(toggle_Cs);
-  button_Cs.size(100,300);
-  button_Cs.position(500,300);
+  button_Cs.size(70,200);
+  button_Cs.position(190,180);
   button_Cs.style('color', '#000000');
   button_Cs.style('background-color', '#000000');
 
   button_Ds = createButton('레#');
   button_Ds.touchStarted(toggle_Ds);
   button_Ds.touchEnded(toggle_Ds);
-  button_Ds.size(100,300);
-  button_Ds.position(650,300);
+  button_Ds.size(70,200);
+  button_Ds.position(290,200);
   button_Ds.style('color', '#000000');
   button_Ds.style('background-color', '#000000');
 
   button_Fs = createButton('파#');
   button_Fs.touchStarted(toggle_Fs);
   button_Fs.touchEnded(toggle_Fs);
-  button_Fs.size(100,300);
-  button_Fs.position(950,300);
+  button_Fs.size(70,200);
+  button_Fs.position(490,200);
   button_Fs.style('color', '#000000');
   button_Fs.style('background-color', '#000000');
 
   button_Gs = createButton('솔#');
   button_Gs.touchStarted(toggle_Gs);
   button_Gs.touchEnded(toggle_Gs);
-  button_Gs.size(100,300);
-  button_Gs.position(1100,300);
+  button_Gs.size(70,200);
+  button_Gs.position(590,200);
   button_Gs.style('color', '#000000');
   button_Gs.style('background-color', '#000000');
 
   button_As = createButton('라#');
   button_As.touchStarted(toggle_As);
   button_As.touchEnded(toggle_As);
-  button_As.size(100,300);
-  button_As.position(1250,300);
+  button_As.size(70,200);
+  button_As.position(690,200);
   button_As.style('color', '#000000');
   button_As.style('background-color', '#000000');
 
   Plus_button = createButton('+');
-  Plus_button.size(170,150);
-  Plus_button.position(1230,100);
+  Plus_button.size(90,60);
+  Plus_button.position(705,80);
   Plus_button.style('font-size', '70px');
   Plus_button.mousePressed(Plus_amp);
 
   Minus_button = createButton('-');
-  Minus_button.size(170,150);
-  Minus_button.position(1430,100);
+  Minus_button.size(90,60);
+  Minus_button.position(835,80);
   Minus_button.style('font-size', '70px');
   Minus_button.mousePressed(Minus_amp);
 
