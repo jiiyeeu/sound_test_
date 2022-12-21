@@ -207,7 +207,14 @@ function deviceMoved(){
 
 var wave;
 var button;
-var playing = false;
+var playing_C = false;
+var playing_D = false;
+var playing_E = false;
+var playing_F = false;
+var playing_G = false;
+var playing_A = false;
+var playing_B = false;
+var playing_C2 = false;
 
 function setup(){
   createCanvas(displayWidth, displayHeight);
@@ -218,7 +225,7 @@ function setup(){
   //wave.freq(440);
   wave.amp(0);
 
-  button_C = createButton('도다');
+  button_C = createButton('도');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -267,105 +274,105 @@ function setup(){
 }
 
 function toggle_C(){
-  if(!playing){
+  if(!playing_C){
     getAudioContext().resume();
     wave.start();
     wave.amp(261, 1);
-    playing = true;
+    playing_C = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_C=false;
   }
 }
 
 function toggle_D(){
-  if(!playing){
+  if(!playing_D){
     getAudioContext().resume();
     wave.start();
     wave.amp(293, 1);
-    playing = true;
+    playing_D = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_D=false;
   }
 }
 
 function toggle_E(){
-  if(!playing){
+  if(!playing_E){
     getAudioContext().resume();
     wave.start();
     wave.amp(329, 1);
-    playing = true;
+    playing_E = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_E=false;
   }
 }
 
 function toggle_F(){
-  if(!playing){
+  if(!playing_F){
     getAudioContext().resume();
     wave.start();
     wave.amp(349, 1);
-    playing = true;
+    playing_F = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_F=false;
   }
 }
 
 function toggle_G(){
-  if(!playing){
+  if(!playing_G){
     getAudioContext().resume();
     wave.start();
     wave.amp(391, 1);
-    playing = true;
+    playing_G = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_G=false;
   }
 }
 
 function toggle_A(){
-  if(!playing){
+  if(!playing_A){
     getAudioContext().resume();
     wave.start();
     wave.amp(440, 1);
-    playing = true;
+    playing_A = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_A=false;
   }
 }
 
 function toggle_B(){
-  if(!playing){
+  if(!playing_B){
     getAudioContext().resume();
     wave.start();
     wave.amp(493, 1);
-    playing = true;
+    playing_B = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_B=false;
   }
 }
 
 function toggle_C2(){
-  if(!playing){
+  if(!playing_C2){
     getAudioContext().resume();
     wave.start();
     wave.amp(523, 1);
-    playing = true;
+    playing_C2 = true;
   }else{
     getAudioContext().resume();
     wave.amp(0,1);
-    playing=false;
+    playing_C2=false;
   }
 }
