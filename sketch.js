@@ -129,7 +129,8 @@ function touchStarted(){
 }
 */
 
-// 버튼 누르면 폰 각도에 따라서 색 변하는 거
+// 버튼 누르면 소리 나고, 기울기 변하면서 가속도 바뀌면 소리 바뀜 > 성공 헤
+/*
 var wave;
 var button;
 var playing = false;
@@ -199,4 +200,188 @@ function deviceMoved(){
   ampValue = accelerationX*1000;
   background(255, 0, 0);
   text(accelerationX/2, 10, 10);
+}
+*/
+
+///////////////////// 기말 과제 > 키보드 만들기 /////////////////////
+
+var wave;
+var button;
+var playing = false;
+
+function setup(){
+  createCanvas(displayWidth, displayHeight);
+  //createCanvas(720,256);
+
+  wave = new p5.Oscillator();
+  wave.setType("sine");
+  //wave.freq(440);
+  wave.amp(0);
+
+  button_C = createButton('도');
+  button_C.touchStarted(toggle_C);
+  button_C.touchEnded(toggle_C);
+
+  //button = createButton('도#');
+  //utton.touchStarted(toggle_C);
+
+  button_D = createButton('레');
+  button_D.touchStarted(toggle_D);
+  button_D.touchEnded(toggle_D);
+
+  //button = createButton('레#');
+  //button.touchStarted(toggle);
+
+  button_E = createButton('미');
+  button_E.touchStarted(toggle_E);
+  button_E.touchEnded(toggle_E);
+
+  button_F = createButton('파');
+  button_F.touchStarted(toggle_F);
+  button_F.touchEnded(toggle_F);
+
+  //button = createButton('파#');
+  //button.touchStarted(toggle);
+
+  button_G = createButton('솔');
+  button_G.touchStarted(toggle_G);
+  button_G.touchEnded(toggle_G);
+
+  //button = createButton('솔#');
+  //button.touchStarted(toggle);
+
+  button_A = createButton('라');
+  button_A.touchStarted(toggle_A);
+  button_A.touchEnded(toggle_A);
+
+  //button = createButton('라#');
+  //button.touchStarted(toggle);
+
+  button_B = createButton('시');
+  button_B.touchStarted(toggle_B);
+  button_B.touchEnded(toggle_B);
+
+  button_C2 = createButton('도');
+  button_C2.touchStarted(toggle_C2);
+  button_C2.touchEnded(toggle_C2);
+}
+
+function toggle_C(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_D(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_E(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_F(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_G(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_A(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_B(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
+}
+
+function toggle_C2(){
+  if(!playing){
+    getAudioContext().resume();
+    wave.start();
+    wave.amp(ampValue, 1);
+    //wave.amp(0.3, 1);
+    playing = true;
+  }else{
+    getAudioContext().resume();
+    //wave.amp(0,1);
+    ampValue = 0;
+    playing=false;
+  }
 }
