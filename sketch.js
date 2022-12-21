@@ -440,6 +440,7 @@ function setup(){
   button_Cs.touchEnded(toggle_Cs);
   button_Cs.size(100,300);
   button_Cs.position(500,300);
+  button_Cs.style('color', '#000000');
   button_Cs.style('background-color', '#000000');
 
   button_Ds = createButton('레#');
@@ -447,6 +448,7 @@ function setup(){
   button_Ds.touchEnded(toggle_Ds);
   button_Ds.size(100,300);
   button_Ds.position(650,300);
+  button_Ds.style('color', '#000000');
   button_Ds.style('background-color', '#000000');
 
   button_Fs = createButton('파#');
@@ -454,6 +456,7 @@ function setup(){
   button_Fs.touchEnded(toggle_Fs);
   button_Fs.size(100,300);
   button_Fs.position(950,300);
+  button_Fs.style('color', '#000000');
   button_Fs.style('background-color', '#000000');
 
   button_Gs = createButton('솔#');
@@ -461,6 +464,7 @@ function setup(){
   button_Gs.touchEnded(toggle_Gs);
   button_Gs.size(100,300);
   button_Gs.position(1100,300);
+  button_Gs.style('color', '#000000');
   button_Gs.style('background-color', '#000000');
 
   button_As = createButton('라#');
@@ -468,6 +472,7 @@ function setup(){
   button_As.touchEnded(toggle_As);
   button_As.size(100,300);
   button_As.position(1250,300);
+  button_As.style('color', '#000000');
   button_As.style('background-color', '#000000');
 
   Plus_button = createButton('+');
