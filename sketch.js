@@ -236,10 +236,38 @@ function setup(){
   createCanvas(displayWidth, displayHeight);
   //createCanvas(720,256);
 
-  wave = new p5.Oscillator();
-  wave.setType("sine");
+  wave_C = new p5.Oscillator();
+  wave_C.setType("sine");
   //wave.freq(440);
-  wave.amp(0);
+  wave_C.amp(0);
+
+  wave_D = new p5.Oscillator();
+  wave_D.setType("sine");
+  wave_D.amp(0);
+
+  wave_E = new p5.Oscillator();
+  wave_E.setType("sine");
+  wave_E.amp(0);
+
+  wave_F = new p5.Oscillator();
+  wave_F.setType("sine");
+  wave_F.amp(0);
+
+  wave_G = new p5.Oscillator();
+  wave_G.setType("sine");
+  wave_G.amp(0);
+
+  wave_A = new p5.Oscillator();
+  wave_A.setType("sine");
+  wave_A.amp(0);
+
+  wave_B = new p5.Oscillator();
+  wave_B.setType("sine");
+  wave_B.amp(0);
+
+  wave_C2 = new p5.Oscillator();
+  wave_C2.setType("sine");
+  wave_C2.amp(0);
 
   button_C = createButton('도C');
   button_C.touchStarted(toggle_C);
