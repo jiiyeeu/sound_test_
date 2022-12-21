@@ -264,7 +264,7 @@ function setup(){
 
   if(typeof DeviceMotionEvent.requestPermission === "function"){
     //background(255,0,0);
-    button = createButton("Click to iOS Sensor");
+    button = createButton("수정Click to iOS Sensor");
     button.size(535,60);
     button.position(125,80);
     button.style('font-size', '15px');
