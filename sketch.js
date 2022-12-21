@@ -326,57 +326,57 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도수');
-  // button_C.touchStarted(toggle_C);
-  // button_C.touchEnded(toggle_C);
+  button_C = createButton('도다');
+  button_C.touchStarted(toggle_C);
+  button_C.touchEnded(toggle_C);
 
   button_Cs = createButton('도#');
-  // button_Cs.touchStarted(toggle_Cs);
-  // button_Cs.touchEnded(toggle_Cs);
+  button_Cs.touchStarted(toggle_Cs);
+  button_Cs.touchEnded(toggle_Cs);
 
   button_D = createButton('레');
-  // button_D.touchStarted(toggle_D);
-  // button_D.touchEnded(toggle_D);
+  button_D.touchStarted(toggle_D);
+  button_D.touchEnded(toggle_D);
 
   button_Ds = createButton('레#');
-  // button_Ds.touchStarted(toggle_Ds);
-  // button_Ds.touchEnded(toggle_Ds);
+  button_Ds.touchStarted(toggle_Ds);
+  button_Ds.touchEnded(toggle_Ds);
 
   button_E = createButton('미');
-  // button_E.touchStarted(toggle_E);
-  // button_E.touchEnded(toggle_E);
+  button_E.touchStarted(toggle_E);
+  button_E.touchEnded(toggle_E);
 
   button_F = createButton('파');
-  // button_F.touchStarted(toggle_F);
-  // button_F.touchEnded(toggle_F);
+  button_F.touchStarted(toggle_F);
+  button_F.touchEnded(toggle_F);
 
   button_Fs = createButton('파#');
-  // button_Fs.touchStarted(toggle_Fs);
-  // button_Fs.touchEnded(toggle_Fs);
+  button_Fs.touchStarted(toggle_Fs);
+  button_Fs.touchEnded(toggle_Fs);
 
   button_G = createButton('솔');
-  // button_G.touchStarted(toggle_G);
-  // button_G.touchEnded(toggle_G);
+  button_G.touchStarted(toggle_G);
+  button_G.touchEnded(toggle_G);
 
   button_Gs = createButton('솔#');
-  // button_Gs.touchStarted(toggle_Gs);
-  // button_Gs.touchEnded(toggle_Gs);
+  button_Gs.touchStarted(toggle_Gs);
+  button_Gs.touchEnded(toggle_Gs);
 
   button_A = createButton('라');
-  // button_A.touchStarted(toggle_A);
-  // button_A.touchEnded(toggle_A);
+  button_A.touchStarted(toggle_A);
+  button_A.touchEnded(toggle_A);
 
   button_As = createButton('라#');
-  // button_As.touchStarted(toggle_As);
-  // button_As.touchEnded(toggle_As);
+  button_As.touchStarted(toggle_As);
+  button_As.touchEnded(toggle_As);
 
   button_B = createButton('시');
-  // button_B.touchStarted(toggle_B);
-  // button_B.touchEnded(toggle_B);
+  button_B.touchStarted(toggle_B);
+  button_B.touchEnded(toggle_B);
 
   button_C2 = createButton('도');
-  // button_C2.touchStarted(toggle_C2);
-  // button_C2.touchEnded(toggle_C2);
+  button_C2.touchStarted(toggle_C2);
+  button_C2.touchEnded(toggle_C2);
 
   Plus_button = createButton('+');
   Plus_button.mousePressed(Plus_amp);
@@ -401,48 +401,22 @@ function deviceMoved(){
 }
 
 function draw(){
-  button_C.touchStarted(toggle_C);
-  button_C.touchEnded(toggle_C);
 
-  if(rotationX !==0){
+  if(rotationX>10 | rotationX<10){
     wave_C.freq(freqValue);
+    wave_Cs.freq(freqValue);
+    wave_D.freq(freqValue);
+    wave_Ds.freq(freqValue);
+    wave_E.freq(freqValue);
+    wave_F.freq(freqValue);
+    wave_Fs.freq(freqValue);
+    wave_G.freq(freqValue);
+    wave_Gs.freq(freqValue);
+    wave_A.freq(freqValue);
+    wave_As.freq(freqValue);
+    wave_B.freq(freqValue);
+    wave_C2.freq(freqValue);
   }
-
-  button_Cs.touchStarted(toggle_Cs);
-  button_Cs.touchEnded(toggle_Cs);
-
-  button_D.touchStarted(toggle_D);
-  button_D.touchEnded(toggle_D);
-
-  button_Ds.touchStarted(toggle_Ds);
-  button_Ds.touchEnded(toggle_Ds);
-
-  button_E.touchStarted(toggle_E);
-  button_E.touchEnded(toggle_E);
-
-  button_F.touchStarted(toggle_F);
-  button_F.touchEnded(toggle_F);
-
-  button_Fs.touchStarted(toggle_Fs);
-  button_Fs.touchEnded(toggle_Fs);
-
-  button_G.touchStarted(toggle_G);
-  button_G.touchEnded(toggle_G);
-
-  button_Gs.touchStarted(toggle_Gs);
-  button_Gs.touchEnded(toggle_Gs);
-
-  button_A.touchStarted(toggle_A);
-  button_A.touchEnded(toggle_A);
-
-  button_As.touchStarted(toggle_As);
-  button_As.touchEnded(toggle_As);
-
-  button_B.touchStarted(toggle_B);
-  button_B.touchEnded(toggle_B);
-
-  button_C2.touchStarted(toggle_C2);
-  button_C2.touchEnded(toggle_C2);
 
 }
 
