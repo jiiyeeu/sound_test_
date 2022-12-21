@@ -224,15 +224,20 @@ var button_B;
 var button_C2;
 
 var playing_C = false;
+var playing_Cs = false;
 var playing_D = false;
+var playing_Ds = false;
 var playing_E = false;
 var playing_F = false;
+var playing_Fs = false;
 var playing_G = false;
+var playing_Gs = false;
 var playing_A = false;
+var playing_As = false;
 var playing_B = false;
 var playing_C2 = false;
 
-var ampValue = 0;
+var ampValue = 0.4;
 
 function setup(){
   createCanvas(displayWidth, displayHeight);
@@ -243,9 +248,17 @@ function setup(){
   //wave.freq(440);
   wave_C.amp(0);
 
+  wave_Cs = new p5.Oscillator();
+  wave_Cs.setType("sine");
+  wave_Cs.amp(0);
+
   wave_D = new p5.Oscillator();
   wave_D.setType("sine");
   wave_D.amp(0);
+
+  wave_Ds = new p5.Oscillator();
+  wave_Ds.setType("sine");
+  wave_Ds.amp(0);
 
   wave_E = new p5.Oscillator();
   wave_E.setType("sine");
@@ -259,9 +272,17 @@ function setup(){
   wave_G.setType("sine");
   wave_G.amp(0);
 
+  wave_Gs = new p5.Oscillator();
+  wave_Gs.setType("sine");
+  wave_Gs.amp(0);
+
   wave_A = new p5.Oscillator();
   wave_A.setType("sine");
   wave_A.amp(0);
+
+  wave_As = new p5.Oscillator();
+  wave_As.setType("sine");
+  wave_As.amp(0);
 
   wave_B = new p5.Oscillator();
   wave_B.setType("sine");
@@ -275,15 +296,17 @@ function setup(){
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
-  //button = createButton('도#');
-  //utton.touchStarted(toggle_C);
+  button_Cs = createButton('도#');
+  button_Cs.touchStarted(toggle_Cs);
+  button_Cs.touchEnded(toggle_Cs);
 
   button_D = createButton('레');
   button_D.touchStarted(toggle_D);
   button_D.touchEnded(toggle_D);
 
-  //button = createButton('레#');
-  //button.touchStarted(toggle);
+  button_Ds = createButton('레#');
+  button_Ds.touchStarted(toggle_Ds);
+  button_Ds.touchEnded(toggle_Ds);
 
   button_E = createButton('미');
   button_E.touchStarted(toggle_E);
@@ -293,22 +316,25 @@ function setup(){
   button_F.touchStarted(toggle_F);
   button_F.touchEnded(toggle_F);
 
-  //button = createButton('파#');
-  //button.touchStarted(toggle);
+  button_Fs = createButton('파#');
+  button_Fs.touchStarted(toggle_Fs);
+  button_Fs.touchEnded(toggle_Fs);
 
   button_G = createButton('솔');
   button_G.touchStarted(toggle_G);
   button_G.touchEnded(toggle_G);
 
-  //button = createButton('솔#');
-  //button.touchStarted(toggle);
+  button_Gs = createButton('솔#');
+  button_GS.touchStarted(toggle_Gs);
+  button_GS.touchEnded(toggle_Gs);
 
   button_A = createButton('라');
   button_A.touchStarted(toggle_A);
   button_A.touchEnded(toggle_A);
 
-  //button = createButton('라#');
-  //button.touchStarted(toggle);
+  button_As = createButton('라#');
+  button_As.touchStarted(toggle_As);
+  button_As.touchEnded(toggle_As);
 
   button_B = createButton('시');
   button_B.touchStarted(toggle_B);
@@ -318,7 +344,7 @@ function setup(){
   button_C2.touchStarted(toggle_C2);
   button_C2.touchEnded(toggle_C2);
 
-  Plus_button = createButton('+수정');
+  Plus_button = createButton('+');
   Plus_button.mousePressed(Plus_amp);
   Minus_button = createButton('-');
   Minus_button.mousePressed(Minus_amp);
@@ -353,6 +379,21 @@ function toggle_C(){
   }
 }
 
+function toggle_Cs(){
+  if(!playing_Cs){
+    getAudioContext().resume();
+    wave_Cs.start();
+    //wave_Cs.amp(1);
+    wave_Cs.amp(ampValue);
+    wave_Cs.freq(277);
+    playing_Cs = true;
+  }else{
+    getAudioContext().resume();
+    wave_Cs.amp(0,0.3);
+    playing_Cs=false;
+  }
+}
+
 function toggle_D(){
   if(!playing_D){
     getAudioContext().resume();
@@ -365,6 +406,21 @@ function toggle_D(){
     getAudioContext().resume();
     wave_D.amp(0,0.3);
     playing_D=false;
+  }
+}
+
+function toggle_Ds(){
+  if(!playing_Ds){
+    getAudioContext().resume();
+    wave_Ds.start();
+    //wave_Ds.amp(1);
+    wave_Ds.amp(ampValue);
+    wave_Ds.freq(311);
+    playing_Ds = true;
+  }else{
+    getAudioContext().resume();
+    wave_Ds.amp(0,0.3);
+    playing_Ds=false;
   }
 }
 
@@ -398,6 +454,21 @@ function toggle_F(){
   }
 }
 
+function toggle_Fs(){
+  if(!playing_Fs){
+    getAudioContext().resume();
+    wave_Fs.start();
+    //wave_Fs.amp(1);
+    wave_Fs.amp(ampValue);
+    wave_Fs.freq(369);
+    playing_Fs = true;
+  }else{
+    getAudioContext().resume();
+    wave_Fs.amp(0,0.3);
+    playing_Fs=false;
+  }
+}
+
 function toggle_G(){
   if(!playing_G){
     getAudioContext().resume();
@@ -413,6 +484,21 @@ function toggle_G(){
   }
 }
 
+function toggle_Gs(){
+  if(!playing_Gs){
+    getAudioContext().resume();
+    wave_Gs.start();
+    //wave_Gs.amp(1);
+    wave_Gs.amp(ampValue);
+    wave_Gs.freq(415);
+    playing_Gs = true;
+  }else{
+    getAudioContext().resume();
+    wave_Gs.amp(0,0.3);
+    playing_Gs=false;
+  }
+}
+
 function toggle_A(){
   if(!playing_A){
     getAudioContext().resume();
@@ -425,6 +511,21 @@ function toggle_A(){
     getAudioContext().resume();
     wave_A.amp(0,0.3);
     playing_A=false;
+  }
+}
+
+function toggle_As(){
+  if(!playing_As){
+    getAudioContext().resume();
+    wave_As.start();
+    //wave_As.amp(1);
+    wave_As.amp(ampValue);
+    wave_As.freq(466);
+    playing_As = true;
+  }else{
+    getAudioContext().resume();
+    wave_As.amp(0,0.3);
+    playing_As=false;
   }
 }
 
