@@ -205,8 +205,24 @@ function deviceMoved(){
 
 ///////////////////// 기말 과제 > 키보드 만들기 /////////////////////
 
-var wave;
-var button;
+var wave_C;
+var wave_D;
+var wave_E;
+var wave_F;
+var wave_G;
+var wave_A;
+var wave_B;
+var wave_C2;
+
+var button_C;
+var button_D;
+var button_E;
+var button_F;
+var button_G;
+var button_A;
+var button_B;
+var button_C2;
+
 var playing_C = false;
 var playing_D = false;
 var playing_E = false;
@@ -276,13 +292,13 @@ function setup(){
 function toggle_C(){
   if(!playing_C){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(261);
+    wave_C.start();
+    wave_C.amp(1);
+    wave_C.freq(261);
     playing_C = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_C.amp(0);
     playing_C=false;
   }
 }
@@ -290,13 +306,13 @@ function toggle_C(){
 function toggle_D(){
   if(!playing_D){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(293);
+    wave_D.start();
+    wave_D.amp(1);
+    wave_D.freq(293);
     playing_D = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_D.amp(0);
     playing_D=false;
   }
 }
@@ -304,13 +320,13 @@ function toggle_D(){
 function toggle_E(){
   if(!playing_E){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(329);
+    wave_E.start();
+    wave_E.amp(1);
+    wave_E.freq(329);
     playing_E = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_E.amp(0);
     playing_E=false;
   }
 }
@@ -318,13 +334,13 @@ function toggle_E(){
 function toggle_F(){
   if(!playing_F){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(349);
+    wave_F.start();
+    wave_F.amp(1);
+    wave_F.freq(349);
     playing_F = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_F.amp(0);
     playing_F=false;
   }
 }
@@ -332,13 +348,13 @@ function toggle_F(){
 function toggle_G(){
   if(!playing_G){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(391);
+    wave_G.start();
+    wave_G.amp(1);
+    wave_G.freq(391);
     playing_G = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_G.amp(0);
     playing_G=false;
   }
 }
@@ -346,13 +362,13 @@ function toggle_G(){
 function toggle_A(){
   if(!playing_A){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(440);
+    wave_A.start();
+    wave_A.amp(1);
+    wave_A.freq(440);
     playing_A = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_A.amp(0);
     playing_A=false;
   }
 }
@@ -360,13 +376,13 @@ function toggle_A(){
 function toggle_B(){
   if(!playing_B){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(493);
+    wave_B.start();
+    wave_B.amp(1);
+    wave_B.freq(493);
     playing_B = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_B.amp(0);
     playing_B=false;
   }
 }
@@ -374,13 +390,13 @@ function toggle_B(){
 function toggle_C2(){
   if(!playing_C2){
     getAudioContext().resume();
-    wave.start();
-    wave.amp(1);
-    wave.freq(523);
+    wave_C2.start();
+    wave_C2.amp(1);
+    wave_C2.freq(523);
     playing_C2 = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0);
+    wave_C2.amp(0);
     playing_C2=false;
   }
 }
