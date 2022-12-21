@@ -253,7 +253,9 @@ var Minus_button;
 var ampValue = 0.4;
 
 function setup(){
-  createCanvas(displayWidth, displayHeight);
+  //createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
+
   //createCanvas(720,256);
 
   wave_C = new p5.Oscillator();
