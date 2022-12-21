@@ -326,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도만수');
+  button_C = createButton('도수');
   // button_C.touchStarted(toggle_C);
   // button_C.touchEnded(toggle_C);
 
@@ -404,6 +404,10 @@ function draw(){
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
+  if(rotationX !==0){
+    wave_C.freq(freqValue);
+  }
+
   button_Cs.touchStarted(toggle_Cs);
   button_Cs.touchEnded(toggle_Cs);
 
@@ -462,9 +466,9 @@ function toggle_C(){
     //wave_C.amp(1);
     wave_C.amp(ampValue);
     wave_C.freq(261);
-    if(rotationX !==0){
-      wave_C.freq(freqValue);
-    }
+    // if(rotationX !==0){
+    //   wave_C.freq(freqValue);
+    // }
     playing_C = true;
   }else{
     getAudioContext().resume();
