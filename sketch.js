@@ -326,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도만');
+  button_C = createButton('도다시');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -408,9 +408,13 @@ function Minus_amp(){
 
 function deviceMoved(){
   //ampValue = accelerationX/2;;
-  freqValue = accelerationX*1000;
+  //freqValue = accelerationX*1000;
   background(255 - freqValue, 0, 0);
   //text(accelerationX/2, 10, 10);
+}
+
+function draw(){
+  freqValue = accelerationX*1000;
 }
 
 function toggle_C(){
