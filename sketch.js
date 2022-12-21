@@ -263,7 +263,7 @@ function setup(){
   //createCanvas(720,256);
 
   if(typeof DeviceMotionEvent.requestPermission === "function"){
-    background(255,0,0);
+    //background(255,0,0);
     button = createButton("Click to iOS Sensor");
     button.mousePressed(iosAccese);
   }else{
