@@ -281,6 +281,10 @@ function setup(){
   wave_F.setType("sine");
   wave_F.amp(0);
 
+  wave_Fs = new p5.Oscillator();
+  wave_Fs.setType("sine");
+  wave_Fs.amp(0);
+
   wave_G = new p5.Oscillator();
   wave_G.setType("sine");
   wave_G.amp(0);
