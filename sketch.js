@@ -257,8 +257,8 @@ let permission = false;
 var freqValue;
 
 function setup(){
-  //createCanvas(displayWidth, displayHeight);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
+  //createCanvas(windowWidth, windowHeight);
 
   //createCanvas(720,256);
 
