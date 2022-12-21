@@ -396,7 +396,7 @@ function iosAccese(){
 function deviceMoved(){
   //ampValue = accelerationX/2;;
   freqValue = rotationX*10;
-  background(255, 0, 0);
+  //background(255, 0, 0);
   text(rotationX*10, 10, 10);
 }
 
