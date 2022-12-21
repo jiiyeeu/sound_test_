@@ -262,9 +262,9 @@ function setup(){
 
   createCanvas(1050,600);
 
+  //iOS 센서 활성화 버튼
   if(typeof DeviceMotionEvent.requestPermission === "function"){
-    //background(255,0,0);
-    button = createButton("수정2Click to iOS Sensor");
+    button = createButton("Click to iOS Sensor");
     button.size(535,60);
     button.position(125,80);
     button.style('font-size', '15px');
@@ -273,7 +273,8 @@ function setup(){
     background(0,255,0);
     text("is not a ios", 100,100);
   }
-
+  
+  // 각 건반 Oscillator 생성
   wave_C = new p5.Oscillator();
   wave_C.setType("sine");
   //wave.freq(440);
@@ -327,6 +328,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
+  // 도~도까지 버튼 생성 + 모양 조정
   button_C = createButton('도');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
@@ -336,14 +338,6 @@ function setup(){
   button_C.style('border-color', '#000000');
   button_C.style('background-color', '#FFFFFF');
 
-
-  // button_Cs = createButton('도#');
-  // button_Cs.touchStarted(toggle_Cs);
-  // button_Cs.touchEnded(toggle_Cs);
-  // button_Cs.size(200,300);
-  // button_Cs.position(300,300);
-  // button_Cs.style('background-color', '#000000');
-
   button_D = createButton('레');
   button_D.touchStarted(toggle_D);
   button_D.touchEnded(toggle_D);
@@ -352,13 +346,6 @@ function setup(){
   button_D.style('color', '#FFFFFF');
   button_D.style('border-color', '#000000');
   button_D.style('background-color', '#FFFFFF');
-
-  // button_Ds = createButton('레#');
-  // button_Ds.touchStarted(toggle_Ds);
-  // button_Ds.touchEnded(toggle_Ds);
-  // button_Ds.size(200,300);
-  // button_Ds.position(500,300);
-  // button_Ds.style('background-color', '#000000');
 
   button_E = createButton('미');
   button_E.touchStarted(toggle_E);
@@ -378,13 +365,6 @@ function setup(){
   button_F.style('border-color', '#000000');
   button_F.style('background-color', '#FFFFFF');
 
-  // button_Fs = createButton('파#');
-  // button_Fs.touchStarted(toggle_Fs);
-  // button_Fs.touchEnded(toggle_Fs);
-  // button_Fs.size(200,300);
-  // button_Fs.position(900,300);
-  // button_Fs.style('background-color', '#000000');
-
   button_G = createButton('솔');
   button_G.touchStarted(toggle_G);
   button_G.touchEnded(toggle_G);
@@ -394,13 +374,6 @@ function setup(){
   button_G.style('border-color', '#000000');
   button_G.style('background-color', '#FFFFFF');
 
-  // button_Gs = createButton('솔#');
-  // button_Gs.touchStarted(toggle_Gs);
-  // button_Gs.touchEnded(toggle_Gs);
-  // button_Gs.size(200,300);
-  // button_Gs.position(1100,300);
-  // button_Gs.style('background-color', '#000000');
-
   button_A = createButton('라');
   button_A.touchStarted(toggle_A);
   button_A.touchEnded(toggle_A);
@@ -409,13 +382,6 @@ function setup(){
   button_A.style('color', '#FFFFFF');
   button_A.style('border-color', '#000000');
   button_A.style('background-color', '#FFFFFF');
-
-  // button_As = createButton('라#');
-  // button_As.touchStarted(toggle_As);
-  // button_As.touchEnded(toggle_As);
-  // button_As.size(200,300);
-  // button_As.position(1300,300);
-  // button_As.style('background-color', '#000000');
 
   button_B = createButton('시');
   button_B.touchStarted(toggle_B);
@@ -435,6 +401,7 @@ function setup(){
   button_C2.style('border-color', '#000000');
   button_C2.style('background-color', '#FFFFFF');
 
+  //도#~라# 버튼 생성 + 모양 조정
   button_Cs = createButton('도#');
   button_Cs.touchStarted(toggle_Cs);
   button_Cs.touchEnded(toggle_Cs);
@@ -480,6 +447,7 @@ function setup(){
   button_As.style('border-color', '#000000');
   button_As.style('background-color', '#000000');
 
+  // amp(볼륨) 조절 버튼 생성
   Plus_button = createButton('+');
   Plus_button.size(90,60);
   Plus_button.position(705,80);
@@ -502,15 +470,13 @@ function iosAccese(){
   }).catch(console.error);
 } 
 
+// 기기를 기울였을 때 발생하는 함수 > rotationX*10값을 freqValue에 넣음
 function deviceMoved(){
-  //ampValue = accelerationX/2;;
   freqValue = rotationX*10;
-  //background(255, 0, 0);
-  text(rotationX*10, 10, 10);
 }
 
 function draw(){
-
+  //rotationX값이 10보다 크거나 -10보다 작을 때 freqValue값을 음으로 출력 > 가만히 있을 때는 원래 음대로 하고 싶어서 이렇게 했습니다.
   if(rotationX>10 || rotationX<-10){
     wave_C.freq(freqValue);
     wave_Cs.freq(freqValue);
@@ -542,10 +508,12 @@ function draw(){
   }
 }
 
+// + 버튼 누르면 볼륨이 0.2씩 커짐
 function Plus_amp(){
     ampValue += 0.2;
 }
 
+// 값이 음수로 변하면 절댓값으로 다시 볼륨이 커지길래 이렇게 했습니다.
 function Minus_amp(){
   if(ampValue>0){
     ampValue -= 0.2;
@@ -555,16 +523,13 @@ function Minus_amp(){
   }
 }
 
+// 각 버튼(건반)에 대한 함수
 function toggle_C(){
   if(!playing_C){
     getAudioContext().resume();
     wave_C.start();
     //wave_C.amp(1);
     wave_C.amp(ampValue);
-    //wave_C.freq(261);
-    // if(rotationX !==0){
-    //   wave_C.freq(freqValue);
-    // }
     playing_C = true;
   }else{
     getAudioContext().resume();
