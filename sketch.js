@@ -277,12 +277,12 @@ function toggle_C(){
   if(!playing_C){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(261);
     playing_C = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_C=false;
   }
 }
@@ -291,12 +291,12 @@ function toggle_D(){
   if(!playing_D){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(293);
     playing_D = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_D=false;
   }
 }
@@ -305,12 +305,12 @@ function toggle_E(){
   if(!playing_E){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(329);
     playing_E = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_E=false;
   }
 }
@@ -319,12 +319,12 @@ function toggle_F(){
   if(!playing_F){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(349);
     playing_F = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_F=false;
   }
 }
@@ -333,12 +333,12 @@ function toggle_G(){
   if(!playing_G){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(391);
     playing_G = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_G=false;
   }
 }
@@ -347,12 +347,12 @@ function toggle_A(){
   if(!playing_A){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(440);
     playing_A = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_A=false;
   }
 }
@@ -361,12 +361,12 @@ function toggle_B(){
   if(!playing_B){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(493);
     playing_B = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_B=false;
   }
 }
@@ -375,12 +375,12 @@ function toggle_C2(){
   if(!playing_C2){
     getAudioContext().resume();
     wave.start();
-    wave.amp(0.3, 1);
+    wave.amp(1);
     wave.freq(523);
     playing_C2 = true;
   }else{
     getAudioContext().resume();
-    wave.amp(0,1);
+    wave.amp(0);
     playing_C2=false;
   }
 }
