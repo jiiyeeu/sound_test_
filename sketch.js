@@ -218,7 +218,7 @@ function setup(){
   //wave.freq(440);
   wave.amp(0);
 
-  button_C = createButton('도');
+  button_C = createButton('도다');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -270,13 +270,11 @@ function toggle_C(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(261, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -285,13 +283,11 @@ function toggle_D(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(293, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -300,13 +296,11 @@ function toggle_E(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(329, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -315,13 +309,11 @@ function toggle_F(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(349, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -330,13 +322,11 @@ function toggle_G(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(391, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -345,13 +335,11 @@ function toggle_A(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(440, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -360,13 +348,11 @@ function toggle_B(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(493, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
@@ -375,13 +361,11 @@ function toggle_C2(){
   if(!playing){
     getAudioContext().resume();
     wave.start();
-    wave.amp(ampValue, 1);
-    //wave.amp(0.3, 1);
+    wave.amp(523, 1);
     playing = true;
   }else{
     getAudioContext().resume();
-    //wave.amp(0,1);
-    ampValue = 0;
+    wave.amp(0,1);
     playing=false;
   }
 }
