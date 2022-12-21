@@ -254,6 +254,8 @@ var ampValue = 0.4;
 
 let permission = false;
 
+var freqValue;
+
 function setup(){
   //createCanvas(displayWidth, displayHeight);
   createCanvas(windowWidth, windowHeight);
@@ -261,7 +263,7 @@ function setup(){
   //createCanvas(720,256);
 
   if(typeof DeviceMotionEvent.requestPermission === "function"){
-    background(255,255,0);
+    background(255,0,0);
     button = createButton("Click to iOS Sensor");
     button.mousePressed(iosAccese);
   }else{
@@ -324,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도');
+  button_C = createButton('도만');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -404,20 +406,23 @@ function Minus_amp(){
   }
 }
 
+function deviceMoved(){
+  //ampValue = accelerationX/2;;
+  freqValue = accelerationX*1000;
+  background(255 - freqValue, 0, 0);
+  //text(accelerationX/2, 10, 10);
+}
+
 function toggle_C(){
   if(!playing_C){
     getAudioContext().resume();
     wave_C.start();
     //wave_C.amp(1);
     wave_C.amp(ampValue);
-
-    //wave_C.freq(261);
-    if(permission = true & rotationX == 0){
-      wave_C.freq(261);
-    }else if(permission = true & rotationX !== 0){
-      wave_C.freq(accelerationX*1000);
+    wave_C.freq(261);
+    if(accelerationX!==0){
+      wave_C.freq(freqValue);
     }
-
     playing_C = true;
   }else{
     getAudioContext().resume();
@@ -432,14 +437,7 @@ function toggle_Cs(){
     wave_Cs.start();
     //wave_Cs.amp(1);
     wave_Cs.amp(ampValue);
-
-    //wave_Cs.freq(277);
-    if(permission = true & rotationX == 0){
-      wave_Cs.freq(277);
-    }else if(permission = true & rotationX !== 0){
-      wave_Cs.freq(accelerationX*1000);
-    }
-
+    wave_Cs.freq(277);
     playing_Cs = true;
   }else{
     getAudioContext().resume();
@@ -454,14 +452,7 @@ function toggle_D(){
     wave_D.start();
     //wave_D.amp(1);
     wave_D.amp(ampValue);
-
-    //wave_D.freq(293);
-    if(permission = true & rotationX == 0){
-      wave_D.freq(293);
-    }else if(permission = true & rotationX !== 0){
-      wave_D.freq(accelerationX*1000);
-    }
-
+    wave_D.freq(293);
     playing_D = true;
   }else{
     getAudioContext().resume();
@@ -476,14 +467,7 @@ function toggle_Ds(){
     wave_Ds.start();
     //wave_Ds.amp(1);
     wave_Ds.amp(ampValue);
-    
-    //wave_Ds.freq(311);
-    if(permission = true & rotationX == 0){
-      wave_Ds.freq(311);
-    }else if(permission = true & rotationX !== 0){
-      wave_Ds.freq(accelerationX*1000);
-    }
-
+    wave_Ds.freq(311);
     playing_Ds = true;
   }else{
     getAudioContext().resume();
@@ -498,14 +482,7 @@ function toggle_E(){
     wave_E.start();
     //wave_E.amp(1);
     wave_E.amp(ampValue);
-
-    //wave_E.freq(329);
-    if(permission = true & rotationX == 0){
-      wave_E.freq(329);
-    }else if(permission = true & rotationX !== 0){
-      wave_E.freq(accelerationX*1000);
-    }
-
+    wave_E.freq(329);
     playing_E = true;
   }else{
     getAudioContext().resume();
@@ -520,14 +497,7 @@ function toggle_F(){
     wave_F.start();
     //wave_F.amp(1);
     wave_F.amp(ampValue);
-
-    //wave_F.freq(349);
-    if(permission = true & rotationX == 0){
-      wave_F.freq(349);
-    }else if(permission = true & rotationX !== 0){
-      wave_F.freq(accelerationX*1000);
-    }
-
+    wave_F.freq(349);
     playing_F = true;
   }else{
     getAudioContext().resume();
@@ -542,14 +512,7 @@ function toggle_Fs(){
     wave_Fs.start();
     //wave_Fs.amp(1);
     wave_Fs.amp(ampValue);
-
-    //wave_Fs.freq(369);
-    if(permission = true & rotationX == 0){
-      wave_Fs.freq(369);
-    }else if(permission = true & rotationX !== 0){
-      wave_Fs.freq(accelerationX*1000);
-    }
-
+    wave_Fs.freq(369);
     playing_Fs = true;
   }else{
     getAudioContext().resume();
@@ -564,14 +527,7 @@ function toggle_G(){
     wave_G.start();
     //wave_G.amp(1);
     wave_G.amp(ampValue);
-
-    //wave_G.freq(391);
-    if(permission = true & rotationX == 0){
-      wave_G.freq(391);
-    }else if(permission = true & rotationX !== 0){
-      wave_G.freq(accelerationX*1000);
-    }
-
+    wave_G.freq(391);
     playing_G = true;
   }else{
     getAudioContext().resume();
@@ -586,14 +542,7 @@ function toggle_Gs(){
     wave_Gs.start();
     //wave_Gs.amp(1);
     wave_Gs.amp(ampValue);
-
-    //wave_Gs.freq(415);
-    if(permission = true & rotationX == 0){
-      wave_Gs.freq(415);
-    }else if(permission = true & rotationX !== 0){
-      wave_Gs.freq(accelerationX*1000);
-    }
-
+    wave_Gs.freq(415);
     playing_Gs = true;
   }else{
     getAudioContext().resume();
@@ -608,14 +557,7 @@ function toggle_A(){
     wave_A.start();
     //wave_A.amp(1);
     wave_A.amp(ampValue);
-    
-    //wave_A.freq(440);
-    if(permission = true & rotationX == 0){
-      wave_A.freq(440);
-    }else if(permission = true & rotationX !== 0){
-      wave_A.freq(accelerationX*1000);
-    }
-
+    wave_A.freq(440);
     playing_A = true;
   }else{
     getAudioContext().resume();
@@ -630,14 +572,7 @@ function toggle_As(){
     wave_As.start();
     //wave_As.amp(1);
     wave_As.amp(ampValue);
-
-    //wave_As.freq(466);
-    if(permission = true & rotationX == 0){
-      wave_As.freq(466);
-    }else if(permission = true & rotationX !== 0){
-      wave_As.freq(accelerationX*1000);
-    }
-
+    wave_As.freq(466);
     playing_As = true;
   }else{
     getAudioContext().resume();
@@ -652,14 +587,7 @@ function toggle_B(){
     wave_B.start();
     //wave_B.amp(1);
     wave_B.amp(ampValue);
-
-    //wave_B.freq(493);
-    if(permission = true & rotationX == 0){
-      wave_B.freq(493);
-    }else if(permission = true & rotationX !== 0){
-      wave_B.freq(accelerationX*1000);
-    }
-
+    wave_B.freq(493);
     playing_B = true;
   }else{
     getAudioContext().resume();
@@ -674,14 +602,7 @@ function toggle_C2(){
     wave_C2.start();
     //wave_C2.amp(1);
     wave_C2.amp(ampValue);
-
-    //wave_C2.freq(523);
-    if(permission = true & rotationX == 0){
-      wave_C2.freq(523);
-    }else if(permission = true & rotationX !== 0){
-      wave_C2.freq(accelerationX*1000);
-    }
-
+    wave_C2.freq(523);
     playing_C2 = true;
   }else{
     getAudioContext().resume();
