@@ -225,7 +225,7 @@ function setup(){
   //wave.freq(440);
   wave.amp(0);
 
-  button_C = createButton('도다');
+  button_C = createButton('도');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
