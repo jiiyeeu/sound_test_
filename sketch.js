@@ -326,7 +326,7 @@ function setup(){
   wave_C2.setType("sine");
   wave_C2.amp(0);
 
-  button_C = createButton('도');
+  button_C = createButton('도Wl');
   button_C.touchStarted(toggle_C);
   button_C.touchEnded(toggle_C);
 
@@ -403,19 +403,19 @@ function deviceMoved(){
 function draw(){
 
   if(rotationX>10 || rotationX<-10){
-    wave_C.freq(261 + freqValue);
-    wave_Cs.freq(277 + freqValue);
-    wave_D.freq(293 + freqValue);
-    wave_Ds.freq(311 + freqValue);
-    wave_E.freq(329 + freqValue);
-    wave_F.freq(349 + freqValue);
-    wave_Fs.freq(369 + freqValue);
-    wave_G.freq(391 + reqValue);
-    wave_Gs.freq(415 + freqValue);
-    wave_A.freq(440 + freqValue);
-    wave_As.freq(466 + freqValue);
-    wave_B.freq(493 + freqValue);
-    wave_C2.freq(523 + freqValue);
+    wave_C.freq(freqValue);
+    wave_Cs.freq(freqValue);
+    wave_D.freq(freqValue);
+    wave_Ds.freq(freqValue);
+    wave_E.freq(freqValue);
+    wave_F.freq(freqValue);
+    wave_Fs.freq(freqValue);
+    wave_G.freq(freqValue);
+    wave_Gs.freq(freqValue);
+    wave_A.freq(freqValue);
+    wave_As.freq(freqValue);
+    wave_B.freq(freqValue);
+    wave_C2.freq(freqValue);
   }else{
     wave_C.freq(261);
     wave_Cs.freq(277);
